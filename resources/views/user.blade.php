@@ -1,0 +1,1 @@
+this is the user page and this ID is {{$id}} and product is {{$product}}
