@@ -17,11 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user/{id}/{product}', function ($id,$product) {
+Route::get('/user', function () {
     // return view('user',['id'=>$id]);
-    $arr['id']=$id;
-    $arr['product']=$product;
-    return view('user',$arr);
+    // $arr['id']=$id;
+    // $arr['product']=$product;
+    $array[]="Peter";
+    $array[]="John";
+    $array[]="Mary";
+    $array2['names']=$array;
+    return view('user',$array2);
 });
 
 Route::get('/about', function () {
