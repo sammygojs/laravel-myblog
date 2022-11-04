@@ -14,13 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\userController;
+use App\Http\Controllers\signupController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/newlink', [userController::class,'index']);
-
+Route::get('signup', [signupController::class,'index']);
+Route::post('signup', [signupController::class,'post']);
 Route::get('/user', function () {
     // return view('user',['id'=>$id]);
     // $arr['id']=$id;
